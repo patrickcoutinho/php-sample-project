@@ -1,11 +1,6 @@
 <?php
 
-require  'bootstrap.php';
-require  'Task.php';
+require 'core/bootstrap.php';
 
-$tasks = $db->selectAll('todo');
-
-echo '<pre>';
-var_dump($tasks);
-
-echo 'teste 2';
+require Router::load('routes.php')
+    ->direct(Request::uri());
