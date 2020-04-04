@@ -9,6 +9,10 @@
 
 <body>
     <h1>Index Page</h1>
+
+    <form method="POST" action="names">
+        <input type="text" name="name">
+    </form>
 </body>
 
 </html>
