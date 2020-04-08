@@ -1,3 +1,8 @@
 <?php
 
-var_dump($_POST['name']);
+$db->insert('users', [
+    'name' => $_POST['name'],
+    'age' => $_POST['age'],
+]);
+
+header('Location: /');

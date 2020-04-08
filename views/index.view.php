@@ -12,7 +12,16 @@
 
     <form method="POST" action="names">
         <input type="text" name="name">
+        <input type="text" name="age">
+        <button type="submit">Send</button>
     </form>
+
+    <ul>
+        <?php foreach ($users as $user) : ?>
+            <li><?= $user->name ?>, age <?= $user->age ?></li>
+        <?php endforeach; ?>
+    </ul>
+
 </body>
 
 </html>

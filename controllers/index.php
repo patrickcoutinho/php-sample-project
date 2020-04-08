@@ -2,6 +2,6 @@
 
 require  'model/Task.php';
 
-$tasks = $db->selectAll('todo');
+$users = $db->selectAll('users');
 
 require 'views/index.view.php';
