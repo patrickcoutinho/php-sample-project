@@ -2,6 +2,8 @@
 
 require 'core/envs.php';
 
-$config = require 'config.php';
+App::bind('config', require 'config.php');
 
-$db = new QueryBuilder(Connection::make($config['database']));
+App::bind('database', new QueryBuilder(
+    Connection::make(App::get('config')['database'])
+));
