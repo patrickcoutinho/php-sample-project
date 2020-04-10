@@ -10,17 +10,13 @@
 <body>
     <h1>Index Page</h1>
 
-    <form method="POST" action="names">
-        <input type="text" name="name">
-        <input type="text" name="age">
-        <button type="submit">Send</button>
-    </form>
-
-    <ul>
-        <?php foreach ($users as $user) : ?>
-            <li><?= $user->name ?>, age <?= $user->age ?></li>
-        <?php endforeach; ?>
-    </ul>
+    <nav>
+        <ul>
+            <li><a href="/">Index</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/users">Users</a></li>
+        </ul>
+    </nav>
 
 </body>
 

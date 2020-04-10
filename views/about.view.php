@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>About Page at <?= $name; ?></h1>
+    <h1>About Page at <?= $title; ?></h1>
 </body>
 
 </html>
