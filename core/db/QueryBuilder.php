@@ -14,12 +14,12 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll(string $table)
+    public function selectAll(string $table, string $model = null)
     {
         $statement = $this->pdo->prepare("select * from {$table}");
         $statement->execute();
 
-        return $statement->fetchAll(PDO::FETCH_CLASS);
+        return $statement->fetchAll(PDO::FETCH_CLASS, $model ? "App\\Models\\{$model}" : 'stdClass');
     }
 
     public function insert($table, $parameters = [])

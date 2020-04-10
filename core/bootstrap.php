@@ -16,7 +16,7 @@ function view($name, $data = [])
 {
     extract($data);
 
-    return "views/{$name}.view.php";
+    return "app/views/{$name}.view.php";
 }
 
 function redirect($path)

@@ -8,9 +8,7 @@ class UsersController
 {
     public function index()
     {
-        require  'model/Task.php';
-
-        $users = App::get('database')->selectAll('users');
+        $users = App::get('database')->selectAll('users', 'Users');
 
         require view('users', compact('users'));
     }

@@ -16,6 +16,8 @@
         <button type="submit">Send</button>
     </form>
 
+    <?php var_dump($users[0]); ?>
+
     <ul>
         <?php foreach ($users as $user) : ?>
             <li><?= $user->name ?>, age <?= $user->age ?></li>
