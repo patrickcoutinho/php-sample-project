@@ -6,7 +6,7 @@ class PagesController
 {
     public function home()
     {
-        require view('index', compact('users'));
+        require view('index');
     }
 
     public function about()
