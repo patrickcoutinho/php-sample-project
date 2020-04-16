@@ -15,7 +15,9 @@ class Router
     {
         $router = new static;
 
+        // phpcs:disable
         require $file;
+        // phpcs:enable
 
         return $router;
     }

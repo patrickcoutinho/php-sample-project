@@ -6,13 +6,13 @@ class PagesController
 {
     public function home()
     {
-        require view('index');
+        require view('index.view.php');
     }
 
     public function about()
     {
         $title = 'iStyle';
 
-        require view('about', compact('title'));
+        require view('about.view.php', compact('title'));
     }
 }

@@ -10,7 +10,7 @@ class UsersController
     {
         $users = App::get('database')->selectAll('users', 'Users');
 
-        require view('users', compact('users'));
+        require view('users.view.php', compact('users'));
     }
 
     public function add()

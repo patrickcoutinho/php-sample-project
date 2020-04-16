@@ -1,4 +1,5 @@
 <?php
+// phpcs:ignoreFile
 
 use App\Core\App;
 use App\Core\Db\Connection;
@@ -10,14 +11,32 @@ App::bind('database', new QueryBuilder(
     Connection::make(App::get('config')['database'])
 ));
 
-function view($name, $data = [])
+/**
+ * @param string $name
+ * @param array $data
+ * @return string
+ */
+function view(string $name, array $data = []): string
 {
     extract($data);
 
-    return "app/views/{$name}.view.php";
+    return "app/views/{$name}";
 }
 
-function redirect($path)
+/**
+ * @param string $path
+ * @return void
+ */
+function redirect(string $path): void
 {
     header("Location: /{$path}");
+}
+
+/**
+ * @param string $string
+ * @return string
+ */
+function render(string $string): string
+{
+    return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 }

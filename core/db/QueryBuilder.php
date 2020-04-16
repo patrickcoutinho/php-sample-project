@@ -36,7 +36,9 @@ class QueryBuilder
 
             $statement->execute($parameters);
         } catch (Exception $error) {
-            die($error->getMessage());
+            unset($error);
+
+            die('Something went wrong.');
         }
     }
 }

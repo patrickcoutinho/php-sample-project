@@ -18,7 +18,7 @@
 
     <ul>
         <?php foreach ($users as $user) : ?>
-            <li><?= $user->name ?>, age <?= $user->age ?></li>
+            <li><?= render($user->name) ?>, age <?= render($user->age) ?></li>
         <?php endforeach; ?>
     </ul>
 

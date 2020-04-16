@@ -1,3 +1,6 @@
+<?php
+// phpcs:ignoreFile 
+?>
 <!DOCTYPE html>
 <html lang="en">
 

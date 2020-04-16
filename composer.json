@@ -6,5 +6,10 @@
     },
     "require": {
         "vlucas/phpdotenv": "^4.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "pheromone/phpcs-security-audit": "^2.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2"
     }
 }

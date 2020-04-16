@@ -17,7 +17,7 @@ class Connection
                 $config['options']
             );
         } catch (PDOException $error) {
-            die($error->getMessage());
+            die(render($error->getMessage()));
         }
     }
 }

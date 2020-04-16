@@ -1,6 +1,7 @@
 <?php
 
-use App\Core\{Request, Router};
+use App\Core\Request;
+use App\Core\Router;
 use Dotenv\Dotenv;
 
 require 'vendor/autoload.php';
