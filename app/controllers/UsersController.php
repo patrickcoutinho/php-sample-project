@@ -6,16 +6,23 @@ use App\Core\App;
 
 class UsersController
 {
+    protected $db;
+
+    public function __construct()
+    {
+        $this->db = App::get('database');
+    }
+
     public function index()
     {
-        $users = App::get('database')->selectAll('users', 'Users');
+        $users = $this->db->selectAll('users', 'Users');
 
         require view('users.view.php', compact('users'));
     }
 
     public function add()
     {
-        App::get('database')->insert('users', [
+        $this->db->insert('users', [
             'name' => $_POST['name'],
             'age' => $_POST['age'],
         ]);

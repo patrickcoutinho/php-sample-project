@@ -2,14 +2,14 @@
 // phpcs:ignoreFile
 
 use App\Core\App;
-use App\Core\Db\Connection;
-use App\Core\Db\QueryBuilder;
+use App\Core\Db\Mysql;
 
 App::bind('config', require 'config.php');
 
-App::bind('database', new QueryBuilder(
-    Connection::make(App::get('config')['database'])
-));
+$mysql = new Mysql;
+$mysql->connect(App::get('config')['database']);
+
+App::bind('database', $mysql);
 
 /**
  * @param string $name
